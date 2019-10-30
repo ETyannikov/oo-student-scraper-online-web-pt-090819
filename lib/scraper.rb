@@ -46,8 +46,6 @@ class Scraper
       end #elsif test
           binding.pry
     end #each loop
-    
-
   end
 
   scrape_profile_page
