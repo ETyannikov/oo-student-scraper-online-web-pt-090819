@@ -34,7 +34,7 @@ class Scraper
     student[:bio] = site.css("div.description-holder p").text
     
     site.css("div.social-icon-container").each do |sic|
-      url = sic.css("a")
+      url = sic.css("a").attribute("href").value
       if url.include? "twitter"
         student[:twitter] = "test"
       end
