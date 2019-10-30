@@ -47,6 +47,5 @@ class Scraper
     end #each loop
   end
 
-  scrape_profile_page
 end
 
