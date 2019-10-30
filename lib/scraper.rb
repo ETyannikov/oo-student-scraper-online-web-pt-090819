@@ -44,9 +44,10 @@ class Scraper
       else
         student[:blog] = url
       end #elsif test
+          binding.pry
     end #each loop
     
-    binding.pry
+
   end
 
   scrape_profile_page
