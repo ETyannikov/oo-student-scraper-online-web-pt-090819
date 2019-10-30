@@ -45,7 +45,7 @@ class Scraper
         student[:blog] = url
       end #elsif test
     end #each loop
+    student
   end #scrape_profile_page
-
 end #scraper
 
