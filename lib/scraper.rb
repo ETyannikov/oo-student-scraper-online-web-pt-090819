@@ -33,8 +33,8 @@ class Scraper
     student[:profile_quote] = site.css("div.profile-quote").text
     student[:bio] = site.css("div.description-holder p").text
     
-    site.css("div.social-icon-container").each do |url|
-      url = i.css("")
+    site.css("div.social-icon-container").each do |sic|
+      url = sic.css("")
       if url.include? "twitter"
         student[:twitter] = "test"
       end
