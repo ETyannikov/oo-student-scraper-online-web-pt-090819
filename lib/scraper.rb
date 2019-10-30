@@ -25,8 +25,8 @@ class Scraper
   students
   end
 
-  def self.scrape_profile_page
-    site = Nokogiri::HTML(open("https://learn-co-curriculum.github.io/student-scraper-test-page/students/ryan-johnson.html"))
+  def self.scrape_profile_page(html)
+    site = Nokogiri::HTML(open(html))
     
     student = {}
     
@@ -45,7 +45,6 @@ class Scraper
         student[:blog] = url
       end #elsif test
     end #each loop
-    binding.pry
   end
 
   scrape_profile_page
