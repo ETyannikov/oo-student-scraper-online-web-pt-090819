@@ -36,8 +36,14 @@ class Scraper
     site.css("div.social-icon-container").each do |sic|
       url = sic.css("a").attribute("href").value
       if url.include? "twitter"
-        student[:twitter] = "test"
-      end
+        student[:twitter] = url
+      elsif url.include? "linkedin"
+        student[:linkedin] = url
+      elsif url.include? "github"
+        student[:github] = url
+      else
+        student[:blog] = url
+      end #elsif test
     end #each loop
     
     binding.pry
